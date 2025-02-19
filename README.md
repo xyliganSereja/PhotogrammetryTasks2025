@@ -2,7 +2,7 @@
   <img width="200" src="/phg_logo.png" alt="Photogrammetry course logo">
 </p>
 
-В этом репозитории предложены задания курса по Фотограмметрии для студентов МКН/ИТМО/ВШЭ.
+В этом репозитории предложены задания курса по Фотограмметрии для очень хороших студентов.
 
 Задания (даты будущих заданий указаны примерно):
 
@@ -17,5 +17,5 @@
 
 - [Аннотация курса](https://github.com/PhotogrammetryCourse/PhotogrammetryTasks2025/blob/master/slides/phg_00_course_annotation.pdf)
 - [Слайды](https://github.com/PhotogrammetryCourse/PhotogrammetryTasks2025/blob/master/slides)
-- [Записи лекций](https://www.youtube.com/watch?v=dowgzvj9M6I&list=PL5p-5hHpsHBrtQQptYgT3kdt3Egb5QNci)
+- Записи лекций
 - [Прошлогодние записи лекций](https://www.youtube.com/watch?v=dowgzvj9M6I&list=PL5p-5hHpsHBrtQQptYgT3kdt3Egb5QNci&index=1)
