@@ -118,13 +118,12 @@ void evaluateDetection(const cv::Mat &M, double minRecall, cv::Mat img0=cv::Mat(
                 detector->compute(img0, kps0, desc0);
                 detector->compute(img1, kps1, desc1);
             } else if (method == 2) {
-                // TODO remove 'return' and uncomment
-                return;
-//                method_name = "SIFT_MY";
-//                log_prefix = "[SIFT_MY] ";
-//                phg::SIFT mySIFT;
-//                mySIFT.detectAndCompute(img0, kps0, desc0);
-//                mySIFT.detectAndCompute(img1, kps1, desc1);
+
+                method_name = "SIFT_MY";
+                log_prefix = "[SIFT_MY] ";
+                phg::SIFT mySIFT;
+                mySIFT.detectAndCompute(img0, kps0, desc0);
+                mySIFT.detectAndCompute(img1, kps1, desc1);
             } else {
                 rassert(false, 13532513412); // это не проверка как часть тестирования, это проверка что число итераций в цикле и if-else ветки все еще согласованы и не разошлись
             }
@@ -346,14 +345,14 @@ TEST (SIFT, Rotate90) {
 TEST (SIFT, Scale50) {
     double angleDegreesClockwise = 0;
     double scale = 0.5;
-    double minRecall = 0.40;
+    double minRecall = 0.50;
     evaluateDetection(cv::getRotationMatrix2D(cv::Point(200, 256), -angleDegreesClockwise, scale), minRecall);
 }
 
 TEST (SIFT, Scale70) {
     double angleDegreesClockwise = 0;
     double scale = 0.7;
-    double minRecall = 0.40;
+    double minRecall = 0.50;
     evaluateDetection(cv::getRotationMatrix2D(cv::Point(200, 256), -angleDegreesClockwise, scale), minRecall);
 }
 
@@ -388,14 +387,14 @@ TEST (SIFT, Scale150) {
 TEST (SIFT, Scale175) {
     double angleDegreesClockwise = 0;
     double scale = 1.75;
-    double minRecall = 0.75;
-    evaluateDetection(cv::getRotationMatrix2D(cv::Point(200, 256), -angleDegreesClockwise, scale), 0.3);
+    double minRecall = 0.50;
+    evaluateDetection(cv::getRotationMatrix2D(cv::Point(200, 256), -angleDegreesClockwise, scale), minRecall);
 }
 
 TEST (SIFT, Scale200) {
     double angleDegreesClockwise = 0;
     double scale = 2.0;
-    double minRecall = 0.20;
+    double minRecall = 0.50;
     evaluateDetection(cv::getRotationMatrix2D(cv::Point(200, 256), -angleDegreesClockwise, scale), minRecall);
 }
 
