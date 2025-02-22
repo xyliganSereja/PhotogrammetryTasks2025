@@ -6,7 +6,7 @@
 
 Задания (даты будущих заданий указаны примерно):
 
-- **20.02** [Задание 1:](https://github.com/PhotogrammetryCourse/PhotogrammetryTasks2025/tree/task01): Локальные ключевые точки SIFT (детектор и дескриптор).
+- **20.02** [Задание 1:](https://github.com/PhotogrammetryCourse/PhotogrammetryTasks2025/tree/task01) Локальные ключевые точки SIFT (детектор и дескриптор).
 - **27.02** Задание 2: Сопоставление ключевых точек и подсчет гомографии.
 - **13.03** Задание 3: SFM. Оценка взаимной ориентации и положения камер, построение облака точек.
 - **03.04** Задание 4: SFM. Ceres Solver и Bundle Adjustment.
@@ -17,5 +17,5 @@
 
 - [Аннотация курса](https://github.com/PhotogrammetryCourse/PhotogrammetryTasks2025/blob/master/slides/phg_00_course_annotation.pdf)
 - [Слайды](https://github.com/PhotogrammetryCourse/PhotogrammetryTasks2025/blob/master/slides)
-- Записи лекций
+- [Записи лекций](https://www.youtube.com/playlist?list=PL5p-5hHpsHBp4yTpeZJ_QMSmJPAuov-VF)
 - [Прошлогодние записи лекций](https://www.youtube.com/watch?v=dowgzvj9M6I&list=PL5p-5hHpsHBrtQQptYgT3kdt3Egb5QNci&index=1)
