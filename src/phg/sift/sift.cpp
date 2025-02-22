@@ -375,7 +375,7 @@ void phg::SIFT::findLocalExtremasAndDescribe(
             std::vector<float> votes;
             float biggestVote;
             int32_t oriRadius =
-                (int32_t)(ORIENTATION_WINDOW_R * (1.0 + k * (layer - 1)));
+                static_cast<int32_t>(ORIENTATION_WINDOW_R * (1.0 + k * (layer - 1)));
             if (!buildLocalOrientationHists(img, i, j, oriRadius, votes,
                                             biggestVote)) continue;
 
