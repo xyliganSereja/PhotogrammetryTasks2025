@@ -458,10 +458,8 @@ bool phg::SIFT::buildLocalOrientationHists(const cv::Mat &img, size_t i,
       double orientation = std::atan2(gy, gx);
       orientation = orientation * 180.0 / M_PI;
       orientation = (orientation + 90.0);
-      if (orientation < 0.0)
-        orientation += 360.0;
-      if (orientation >= 360.0)
-        orientation -= 360.0;
+      if (orientation < 0.0)    orientation += 360.0;
+      if (orientation >= 360.0) orientation -= 360.0;
       rassert(orientation >= 0.0 && orientation < 360.0, 5361615612);
       static_assert(360 % ORIENTATION_NHISTS == 0,
                     "Inappropriate bins number!");
@@ -512,8 +510,8 @@ bool phg::SIFT::buildDescriptor(const cv::Mat &img, float px, float py,
           float rotY = shiftVec[0].y;
           float sampleX = px + rotX;
           float sampleY = py + rotY;
-          int xx = (int)std::floor(sampleX);
-          int yy = (int)std::floor(sampleY);
+          int32_t xx = static_cast<int32_t>(std::floor(sampleX));
+          int32_t yy = static_cast<int32_t>(std::floor(sampleY));
           if (xx - 1 < 0 || xx + 1 >= img.cols || yy - 1 < 0 ||
               yy + 1 >= img.rows) {
             continue;
@@ -553,7 +551,7 @@ bool phg::SIFT::buildDescriptor(const cv::Mat &img, float px, float py,
 
   norm = std::sqrt(norm) + 1e-12;
   for (float &val : descriptor) {
-    val /= (float)norm;
+    val /= static_cast<float>(norm);
   }
 
   for (float &val : descriptor) {
@@ -569,7 +567,7 @@ bool phg::SIFT::buildDescriptor(const cv::Mat &img, float px, float py,
 
   norm = std::sqrt(norm) + 1e-12;
   for (float &val : descriptor) {
-    val /= (float)norm;
+    val /= static_cast<float>(norm);
   }
 
   return true;
